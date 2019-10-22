@@ -1,12 +1,10 @@
 export default function selectors(globalState) {
-  const state = globalState.cities;
-  const getCitiesStatus = () => state.getCitiesFetchStatus.status;
-  const getCities = () => state.entities;
-  const getCity = () => state.city;
+  const state = globalState.tasks;
+  const getTasksStatus = () => state.getTasksFetchStatus.status;
+  const getTasks = () => state.entities;
 
   return {
-    getCitiesStatus,
-    getCities,
-    getCity
+    getTasksStatus,
+    getTasks
   };
 }

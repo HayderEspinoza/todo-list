@@ -1,18 +1,18 @@
 import { connect } from 'react-redux';
 import Home from './Home';
-// import { logIn } from './../../store/authentication/actions/index';
-// import selectors from './../../store/authentication/reducers/selectors';
+import { getTasks } from './../../store/tasks/actions';
+import selectors from './../../store/tasks/reducers/selectors';
 
 const mapStateToProps = state => {
-  // const selector = selectors(state);
-  // const session = selector.getSession();
-  // const tokenStatus = selector.getStatusToken();
-  // return { session, tokenStatus };
+  const selector = selectors(state);
+  const tasks = selector.getTasks();
+  const tasksStatus = selector.getTasksStatus();
+  return { tasks, tasksStatus };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    // fetchLogin: data => dispatch(logIn(data))
+    getTasks: () => dispatch(getTasks)
   };
 };
 

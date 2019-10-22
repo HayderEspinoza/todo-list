@@ -3,10 +3,10 @@ import { createFetchStatusReducer } from '../../../utils/createReducers';
 import types from '../actions/types';
 
 export const getTasksFetchStatus = createFetchStatusReducer.forAllRegisters({
-  FETCH: types.GET_CITIES,
-  FETCH_REQUEST: types.GET_CITIES_REQUEST,
-  FETCH_SUCCESS: types.GET_CITIES_SUCCESS,
-  FETCH_FAILURE: types.GET_CITIES_FAILURE
+  FETCH: types.GET_TASKS,
+  FETCH_REQUEST: types.GET_TASKS_REQUEST,
+  FETCH_SUCCESS: types.GET_TASKS_SUCCESS,
+  FETCH_FAILURE: types.GET_TASKS_FAILURE
 });
 
 export const entities = (state = null, action) => {

@@ -6,12 +6,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(
-  cors({
-    credentials: true,
-    origin: []
-  })
-);
+app.use(cors());
 
 app.get('/', (req, res) => {
   return res.status(200).send({ message: 'The server is still runnning' });
