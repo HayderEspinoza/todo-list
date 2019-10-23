@@ -18,3 +18,5 @@ export const VALIDATION_ERRORS = {
   IS_NAN: 'Please enter a number',
   INVALID_PHONE_FORMAT: 'Please enter a valid phone format.'
 };
+
+export const COLORS = ['#c0f3c4', '#bfcdf3', '#f3e8be'];

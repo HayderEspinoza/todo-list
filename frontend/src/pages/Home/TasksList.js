@@ -5,13 +5,20 @@ import PropTypes from 'prop-types';
 
 // create a component
 const TasksList = props => {
-  const { tasks } = props;
+  const { tasks, finishTask } = props;
 
   return (
-    <div>
+    <div className={'task-list'}>
       {tasks.map((item, index) => {
         const { title, description } = item;
-        return <Task key={index} title={title} description={description} />;
+        return (
+          <Task
+            key={index}
+            title={title}
+            description={description}
+            finishTask={finishTask}
+          />
+        );
       })}
     </div>
   );

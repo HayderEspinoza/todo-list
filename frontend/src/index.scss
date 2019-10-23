@@ -23,7 +23,19 @@ code {
 }
 
 .task {
-  border-top: 1px solid #f0f0f0;
+  flex: 1;
+  flex-direction: row;
+  border: 1px solid #f7f7f7;
+  border-left-width: 5px;
+  cursor: pointer;
+}
+
+.task__checked {
+  align-self: flex-end;
+}
+
+.task h4 {
+  font-weight: 500;
 }
 
 .month,
@@ -38,9 +50,11 @@ code {
 .month__name {
   flex: 1;
   text-align: center;
+  font-weight: bold;
 }
 .month__prev {
   padding-left: 20px;
+  cursor: pointer;
 }
 
 .month__next {
@@ -53,8 +67,39 @@ code {
 .days div {
   text-align: center;
 }
-.wrap-day {
-  border: 1px solid #00d1b2;
-  width: 40px;
+.day {
+  background: #f7f7f7;
+  width: 60px;
+  padding: 5px 0;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.day__selected {
+  background: #3d97ff;
+  color: #fff;
+}
+.day__name {
+  font-weight: bold;
+}
+
+.day__number {
+  font-weight: 400;
+}
+
+.day__name {
+  font-size: 12px;
+}
+
+.task-list {
+  margin-top: 30px;
+  flex: 1;
+}
+.task__btn p {
+  vertical-align: middle;
+  text-align: center;
+}
+.month__prev,
+.month__next {
+  cursor: pointer;
 }

@@ -9,6 +9,13 @@ export const getTasksFetchStatus = createFetchStatusReducer.forAllRegisters({
   FETCH_FAILURE: types.GET_TASKS_FAILURE
 });
 
+export const addTaskFetchStatus = createFetchStatusReducer.forAllRegisters({
+  FETCH: types.ADD_TASK,
+  FETCH_REQUEST: types.ADD_TASK_REQUEST,
+  FETCH_SUCCESS: types.ADD_TASK_SUCCESS,
+  FETCH_FAILURE: types.ADD_TASK_FAILURE
+});
+
 export const entities = (state = null, action) => {
   const { tasks } = action;
 
@@ -24,5 +31,6 @@ export const entities = (state = null, action) => {
 
 export default combineReducers({
   getTasksFetchStatus,
+  addTaskFetchStatus,
   entities
 });
